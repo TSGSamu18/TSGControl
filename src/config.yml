@@ -1,0 +1,97 @@
+Command:
+   Main: "tsgcontrol"
+   Aliases:
+     - "control"
+Settings:
+   stafflocation:
+      world: WarpEnchant
+      x: 120
+      y: 130
+      z: 120
+   playerlocation:      
+      world: WarpEnchant
+      x: 125
+      y: 130
+      z: 125
+   use-protocol-lib: true #With protocol lib plugin can prevent conflict with another plugin   
+   finish-control-on-player-quit: true
+   message-player-on-staff-quit: true
+   
+inventory:
+   enabled: true
+   title: "&eSelect an option:"
+   size: 27
+   11: 
+      material: CLAY
+      slot: 11
+      data: 0
+      glow: true
+      name: "&4Hack"
+      lore:
+        - ""
+      isActive: true
+      commands:
+      #If command is execute by console, leave start /
+        - "%console%ban %player%"
+   13: 
+      material: CLAY
+      slot: 13
+      data: 0
+      glow: true
+      name: "&6Admit"
+      lore:
+        - "/ban %player%"
+      isActive: true        
+      commands:
+        - "%console%ban %player% 15"
+   15: 
+      material: CLAY
+      slot: 15
+      data: 0
+      glow: true
+      name: "&aClean"
+      lore:
+        - ""
+      isActive: true        
+      commands:
+        - "/control %end" 
+        
+Messages:
+   prefix: "&4[&eTSGControl&4]"         
+   player-not-found: "&c%player% not found!"
+   no-permission: "&cYou haven't permission to do that!"
+   executor-is-not-player: "&cOnly player can execute this command!"
+   incorrect-usage: "&cIncorrect usage! Try /tsgcontrol help"
+   staff-control-started: 
+            - "&eControl to %player% started!"
+   player-control-started: 
+            - "&eYou are under control by %staff%"
+            - "&cWrite your anydesk number in chat!"
+   staff-control-finished: 
+            - "&eControl finished!"
+   player-control-finished: 
+            - "&eControl finished!"
+   staff-messages-format: "%prefix%%player% > %message%"
+   player-messages-format: "%prefix%%staff% > %message%"
+   player-execute-command-under-control: "&cYou can't execute command while you are under control!"
+   player-not-online: "%prefix%%player% not found online1"
+   staff-not-online: "%prefix%%staff% not found online!"
+   staff-alredy-in-control: "&cYou are alredy in a control session!"
+   player-alredy-in-control: "&cThe player is alredy in a control session!"                     
+   not-in-a-control-session: "&cYou aren't in a control session!"                 
+   on-reload: "Config reloaded! &c[NEED RESTART FOR RELOAD ALL FEATURES!]"
+   on-set-staff-position: "Staff position setted!"
+   on-set-player-position: "Player position setted!"
+   help:
+     - "&6Commands:"
+     - "tsgcontrol help"
+     - "tsgcontrol control <player>"
+     - "tsgcontrol end <staffer>"
+     - "tsgcontrol end"
+     - "tsgcontrol reload"
+     - "tsgcontrol setstaffpos" 
+     - "tsgcontrol setplayerpos"  
+   messages-on-staff-quit: 
+     - "Staffer quitted!"
+     - "Wait..."        
+                      

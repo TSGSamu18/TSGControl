@@ -1,0 +1,27 @@
+name: TSGControl
+version: 1.0
+author: TSGSamu18
+main: tsg.main.TSGControl
+softdepend: [ProtocolLib]
+commands:
+    help:
+       usage: /tsgcontrol help
+       permission: tsgcontrol.help
+    reload:
+       usage: /tsgcontrol reload
+       permission: tsgcontrol.reload
+    end:
+       usage: /tsgcontrol end
+       permission: tsgcontrol.control.end
+    end:
+       usage: /tsgcontrol end <staffer>
+       permission: tsgcontrol.control.end.other
+    control:
+       usage: /tsgcontrol control <player>
+       permission: tsgcontrol.control.start
+    setstaffpos:
+       usage: /tsgcontrol setstaffpos
+       permission: tsgcontrol.setstaffpos
+    setsplayerpos:
+       usage: /tsgcontrol setplayerpos
+       permission: tsgcontrol.setplayerpos
