@@ -11,10 +11,17 @@ A simple minecraft plugin to help server staff to do SS.
 - OfflinePlayer support
 
 <b>Commands/Permissions:</b>
+
 help: tsgcontrol.help
+
 end: tsgcontrol.control.end
+
 end <staffer>: tsgcontrol.control.end.other
+
 start: tsgcontrol.control.start
+
 reload: tsgcontrol.reload
+
 setstaffpos: tsgcontrol.setstaffpos
+
 setplayerpos: tsgcontrol.setplayerpos
